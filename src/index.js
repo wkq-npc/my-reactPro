@@ -1,13 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import {axios} from "./api/http"
 import reportWebVitals from './reportWebVitals';
+import "./assets/styles/reset.css"
+import 'zent/css/index.css';
+import {Provider} from 'react-redux'
+import store from './store/index'
+import { BrowserRouter } from "react-router-dom";
 
+
+
+import App from "./App";
+
+React.Component.prototype.$http=axios
 ReactDOM.render(
-  <React.StrictMode>
+  <BrowserRouter>
+     <Provider store={store}>
     <App />
-  </React.StrictMode>,
+    </Provider>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

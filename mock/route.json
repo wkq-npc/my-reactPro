@@ -1,0 +1,6 @@
+{
+    "/api/hotcaat":"/hotcat",
+    "/api/list":"/list",
+    "/api/detail":"/detail",
+    "/api/category":"/category"
+}
